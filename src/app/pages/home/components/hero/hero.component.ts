@@ -1,6 +1,5 @@
 import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-hero',
@@ -16,8 +15,6 @@ export class HeroComponent {
     { imgPath: '/images/meeting.jpeg' },
     { imgPath: '/images/hero.jpeg' }
   ];
-
-  private subscription!: Subscription;
 
   activities: { title: string }[] = [
     {
