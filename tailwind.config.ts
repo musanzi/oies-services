@@ -8,8 +8,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      lato: ['Lato', 'sans-serif'],
-      space: ['Space Grotesk', 'sans-serif']
+      poppins: ['Poppins', 'sans-serif']
     }
   },
   plugins: []

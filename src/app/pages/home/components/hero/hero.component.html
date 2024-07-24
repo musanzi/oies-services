@@ -1,16 +1,26 @@
-<header class="mb-20 bg-hero bg-center bg-no-repeat bg-cover text-white">
+<section class="mb-20 text-white relative h-screen">
+  <img [ngSrc]="images[2].imgPath" alt="hero" class="w-full h-full object-cover object-center" fill />
   <div
-    class="px-8 py-48 md:py-90 md:pb-64 md:px-32 flex flex-col items-center justify-center bg-black bg-opacity-90 gap-6 text-2xl md:text-4xl">
-    <div class="max-w-screen-md flex flex-col items-start justify-center">
-      <h1 class="font-bold font-space mt-20 mb-10 text-4xl md:text-6xl">
-        Inspirez, Éveillez et
-        <span class="text-sky-600">Transformez</span>
-      </h1>
-      <p class="font-light text-lg mb-8 md:text-2xl">
-        Rejoignez notre conférence annuelle dédiée à l'éveil de la conscience des jeunes entrepreneurs et des femmes.
-        Découvrez des parcours inspirants, développez votre potentiel, et connectez-vous avec des leaders visionnaires.
-        Ensemble, façonnons l'avenir avec audace et créativité.
-      </p>
+    class="absolute top-0 left-0 right-0 bottom-0 px-8 py-48 md:py-90 md:pb-64 md:px-32 bg-black bg-opacity-90 gap-3 text-2xl md:text-4xl">
+    <div class="max-w-screen-md mx-auto flex flex-col items-center">
+      <div class="self-center">
+        <h1 class="font-extrabold mt-20 mb-10 text-4xl md:text-5xl leading-10">
+          Inspirez, Éveillez,
+          <span class="text-sky-400">Transformez </span>
+          <!-- {{ currentSlide() }} -->
+        </h1>
+      </div>
+      <div class="self-start mt-10">
+        <h5 class="font-medium text-lg mb-8 md:text-5xl">Oies services sarl</h5>
+        <ul class="grid grid-cols-2 gap-4">
+          @for (feature of activities; track $index) {
+          <li class="flex items-center gap-2 text-lg">
+            <i class="bi bi-check2 text-sky-800"></i>
+            {{ feature.title }}
+          </li>
+          }
+        </ul>
+      </div>
     </div>
   </div>
-</header>
+</section>
