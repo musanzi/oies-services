@@ -18,7 +18,7 @@ export class HeroComponent {
   ];
 
   activities: { fade: string; title: string }[] = [
-    { fade: 'fade-in-4', title: 'Conférences Utajiri' },
+    { fade: 'fade-in-4', title: 'Utajiri' },
     { fade: 'fade-in-5', title: 'Élevage' },
     { fade: 'fade-in-6', title: 'Agriculture' },
     { fade: 'fade-in-7', title: 'Énergie' }
