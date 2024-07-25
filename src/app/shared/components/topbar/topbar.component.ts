@@ -6,6 +6,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-topbar',
   standalone: true,
   imports: [NgOptimizedImage, RouterLink],
-  templateUrl: './topbar.component.html',
+  templateUrl: './topbar.component.html'
 })
 export class TopbarComponent {}
