@@ -16,18 +16,42 @@
   }
 
   .fade-in-1 {
-    animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in;
   }
 
   .fade-in-2 {
-    animation: fadeIn 0.5s ease-in-out 0.2s;
+    animation: fadeIn 0.5s ease-in 0.2s;
   }
 
   .fade-in-3 {
-    animation: fadeIn 0.5s ease-in-out 0.3s;
+    animation: fadeIn 0.5s ease-in 0.3s;
   }
 
   .fade-in-4 {
-    animation: fadeIn 0.5s ease-in-out 0.4s;
+    animation: fadeIn 0.5s ease-in 0.4s;
+  }
+
+  .fade-in-5 {
+    animation: fadeIn 0.5s ease-in 0.5s;
+  }
+
+  .fade-in-6 {
+    animation: fadeIn 0.5s ease-in 0.6s;
+  }
+
+  .fade-in-7 {
+    animation: fadeIn 0.5s ease-in 0.7s;
+  }
+
+  .fade-in-8 {
+    animation: fadeIn 0.5s ease-in-out 0.8s;
+  }
+
+  .hidde {
+    @apply opacity-0 translate-y-8;
+  }
+
+  .reveal {
+    @apply opacity-100 translate-y-0;
   }
 }

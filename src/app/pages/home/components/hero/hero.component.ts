@@ -1,10 +1,11 @@
 import { AsyncPipe, NgIf, NgOptimizedImage } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { TopbarComponent } from '../../../../shared/components/topbar/topbar.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [NgOptimizedImage, AsyncPipe, NgIf],
+  imports: [NgOptimizedImage, AsyncPipe, NgIf, TopbarComponent],
   templateUrl: './hero.component.html'
 })
 export class HeroComponent {
@@ -16,18 +17,10 @@ export class HeroComponent {
     { imgPath: '/images/hero.jpeg' }
   ];
 
-  activities: { title: string }[] = [
-    {
-      title: 'Conférences Utajiri'
-    },
-    {
-      title: 'Élevage'
-    },
-    {
-      title: 'Agriculture'
-    },
-    {
-      title: 'Énergie'
-    }
+  activities: { fade: string; title: string }[] = [
+    { fade: 'fade-in-4', title: 'Conférences Utajiri' },
+    { fade: 'fade-in-5', title: 'Élevage' },
+    { fade: 'fade-in-6', title: 'Agriculture' },
+    { fade: 'fade-in-7', title: 'Énergie' }
   ];
 }
