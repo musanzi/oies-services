@@ -13,7 +13,7 @@
           </h1>
         </div>
         <div class="self-start mt-10">
-          <h5 class="font-medium text-lg mb-8 md:text-5xl fade-in-2">Oies service sarl</h5>
+          <h5 class="font-medium text-lg mb-8 md:text-5xl fade-in-2">Oies services sarl</h5>
           <ul class="grid grid-cols-2 gap-4">
             @for (activity of activities; track $index; let i = $index) {
             <li class="flex items-center font-light gap-2 text-sm md:text-lg {{ activity.fade }}">
@@ -23,7 +23,6 @@
                     d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
                 </svg>
               </span>
-
               {{ activity.title }}
             </li>
             }
