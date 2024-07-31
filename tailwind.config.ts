@@ -8,7 +8,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      poppins: ['Poppins', 'sans-serif']
+      clash: ['Clash Display', 'sans-serif']
     }
   },
   plugins: []

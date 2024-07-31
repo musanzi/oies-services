@@ -28,7 +28,7 @@ export class ActivitiesComponent {
       image: '/images/agro.jpeg'
     },
     {
-      title: 'Énergie',
+      title: 'Énergie et construction',
       description:
         "Nous investissons également dans le secteur de l'énergie, notamment l'énergie solaire avec des installations modernes, l'énergie par biomasse utilisant des déchets et l'énergie électrique en collaboration avec la SNEL. Nos initiatives énergétiques visent à promouvoir des sources d'énergie renouvelables et à réduire l'empreinte carbone,...",
       image: '/images/electricity.jpeg'
