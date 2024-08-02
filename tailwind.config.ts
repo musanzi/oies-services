@@ -8,7 +8,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      clash: ['General Sans', 'sans-serif']
+      general: ['General Sans', 'sans-serif']
     }
   },
   plugins: []
