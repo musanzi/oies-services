@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TopbarComponent } from './shared/components/topbar/topbar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
+import { TopbarComponent } from './shared/ui/topbar/topbar.component';
+import { FooterComponent } from './shared/ui/footer/footer.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TopbarComponent, FooterComponent],
+  imports: [RouterModule, TopbarComponent, FooterComponent],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

@@ -2,8 +2,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-services',
-  standalone: true,
+  selector: 'app-activities',
   imports: [NgOptimizedImage],
   templateUrl: './activities.component.html'
 })

@@ -1,9 +1,9 @@
 <section class="px-8 py-10 mx-auto max-w-screen-lg">
   <div class="leading-snug">
-    <h2 class="mt-4 text-2xl font-bold text-gray-800 mb-8">
+    <h2 class="animate-fadeIn mt-4 text-2xl font-bold text-gray-800 mb-8">
       Découvrez nos <span class="text-sky-700"> activités </span>
     </h2>
-    <p class="md:text-lg">
+    <p class="md:text-lg animate-fadeIn">
       Nous organisons des conférences annuelles, appelées "Utajiri event", nous sommes engagés dans l'élevage et
       l'agriculture, nous investissons également dans le secteur de l'énergie.
     </p>
@@ -12,11 +12,14 @@
   <div class="grid grid-cols-1 items-center content-center mt-16">
     @for (activitie of activities; track $index) {
     <div class="grid grid-cols-1 md:grid-cols-2 mb-20 gap-10 items-center">
-      <div class="relative w-full h-60 md:h-80 mt-5 lg:mt-0  z-10 {{ $index % 2 !== 0 ? 'md:order-last' : '' }}">
+      <div
+        class="animate-fadeIn relative w-full h-60 md:h-80 mt-5 lg:mt-0  z-10 {{
+          $index % 2 !== 0 ? 'md:order-last' : ''
+        }}">
         <img class="object-cover rounded-lg" [ngSrc]="activitie.image" alt="hero" fill />
       </div>
       <div
-        class="bg-white rounded-lg p-8 shadow-xl z-40 -mt-10 md:-mt-0 relative {{
+        class="animate-fadeIn bg-white rounded-lg p-8 shadow-xl z-40 -mt-10 md:-mt-0 relative {{
           $index % 2 !== 0 ? 'md:-mr-20' : 'md:-ml-20'
         }}">
         <span
