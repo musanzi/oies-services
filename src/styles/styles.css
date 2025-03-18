@@ -5,6 +5,12 @@
   --font-monaSans: 'Mona Sans', sans-serif;
 }
 
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+}
+
 @layer components {
   .fadeInUp {
     animation: fadeInUp 300ms ease-in-out;
