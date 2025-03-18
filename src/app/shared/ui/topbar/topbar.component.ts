@@ -1,13 +1,11 @@
-import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
-  host: {
-    '(window:scroll)': 'onWindowScroll()'
-  },
-  imports: [NgOptimizedImage, CommonModule, RouterModule],
+  host: { '(window:scroll)': 'onWindowScroll()' },
+  imports: [CommonModule, RouterModule],
   templateUrl: './topbar.component.html'
 })
 export class TopbarComponent {

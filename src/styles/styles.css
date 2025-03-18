@@ -1,0 +1,56 @@
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+@import 'tailwindcss';
+
+@theme {
+  --font-monaSans: 'Mona Sans', sans-serif;
+}
+
+@layer components {
+  .fadeInUp {
+    animation: fadeInUp 300ms ease-in-out;
+  }
+
+  .loader {
+    border: 2px solid #fff;
+    width: 48px;
+    height: 48px;
+    background: oklch(0.588 0.158 241.966);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+
+  .loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border: 24px solid;
+    border-color: transparent #fff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
