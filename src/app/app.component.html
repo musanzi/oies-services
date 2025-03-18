@@ -1,9 +1,11 @@
-@defer {
-<app-topbar />
-<router-outlet />
-<app-footer />
-} @placeholder {
-<div class="h-screen flex flex-col items-center justify-center">
-  <div class="loader"></div>
+<div class="overflow-x-hidden">
+  @defer {
+  <app-topbar />
+  <router-outlet />
+  <app-footer />
+  } @placeholder {
+  <div class="h-screen flex flex-col items-center justify-center">
+    <div class="loader"></div>
+  </div>
+  }
 </div>
-}

@@ -2,13 +2,7 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-monaSans: 'Mona Sans', sans-serif;
-}
-
-@layer base {
-  body {
-    overflow-x: hidden;
-  }
+  --font-inter: 'Inter', sans-serif;
 }
 
 @layer components {
