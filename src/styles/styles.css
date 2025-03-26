@@ -3,4 +3,16 @@
 
 @theme {
   --font-inter: 'Inter', sans-serif;
+  --animate-fadeInUp: fadeInUp 300ms ease-in;
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
