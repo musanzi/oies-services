@@ -1,12 +1,14 @@
 <header
-  class="h-16 py-6 w-full right-0 left-0 flex flex-col justify-center z-50 font-satoshi"
-  [ngClass]="isFixed() ? 'fixed shadow-md bg-white text-gray-950 animate-fadeInUp' : 'absolute top-6 text-white'">
-  <nav class="flex items-center justify-between px-8 md:px-32">
-    <a [routerLink]="'/'">
+  class="h-16 py-6 px-8 mx-auto max-w-screen-lg right-0 left-0 flex flex-col justify-center z-50 font-satoshi"
+  [ngClass]="{
+    'fixed  bg-white rounded-full top-5 shadow-lg text-gray-950 animate-fadeInUp': isFixed(),
+    'absolute top-6 text-white': !isFixed()
+  }">
+  <nav class="flex justify-between items-center">
+    <a [routerLink]="'/'" class="inline-block">
       <h1 class="font-bold text-2xl">Oies<span class="text-sky-500 ping">.</span></h1>
     </a>
-
-    <a href="tel:+243811583939" class="text-sm flex items-center gap-2 bg-sky-600 px-4 rounded-sm py-2 text-white">
+    <a href="tel:+243811583939" class="text-sm flex items-center gap-2 bg-sky-600 px-4 rounded-full py-2 text-white">
       <span class="h-4 w-4 fill-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
           <path

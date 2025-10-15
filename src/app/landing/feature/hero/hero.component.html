@@ -4,27 +4,25 @@
     <div
       @fadeInStagger
       class="absolute top-0 left-0 right-0 bottom-0 flex flex-col items-start justify-center bg-sky-900/70 gap-6 text-white">
-      <div class="px-8 md:px-32">
-        <h1 class="fade-item font-bold mt-20 mb-10 text-3xl md:text-5xl leading-10">
-          Inspirez, Éveillez,
-          <span class="text-sky-400">Transformez </span>
+      <div class="mx-auto max-w-screen-lg">
+        <h1 class="fade-item font-extrabold mt-20 mb-10 text-3xl md:text-7xl leading-snug">
+          Inspirer, Éveiller,
+          <span class="text-sky-400">Transformer </span>
         </h1>
-        <div class="self-start mt-10">
-          <h5 class="font-black text-4xl mb-8 md:text-6xl fade-item">Oies services sarl</h5>
-          <ul class="grid grid-cols-2 gap-4">
-            @for (activity of activities; track $index) {
-            <li class="fade-item flex items-center font-light gap-2 text-lg">
-              <span class="fill-sky-400 h-4 w-4">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                  <path
-                    d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
-                </svg>
-              </span>
-              {{ activity }}
-            </li>
-            }
-          </ul>
-        </div>
+        <h5 class="font-black text-4xl mb-8 md:text-6xl fade-item">Oies services sarl</h5>
+        <ul class="grid grid-cols-2 gap-4">
+          @for (activity of activities; track $index) {
+          <li class="fade-item flex items-center font-light gap-2 text-lg">
+            <span class="fill-sky-400 h-4 w-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path
+                  d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z" />
+              </svg>
+            </span>
+            {{ activity }}
+          </li>
+          }
+        </ul>
       </div>
     </div>
   </div>
