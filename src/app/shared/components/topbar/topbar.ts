@@ -6,9 +6,9 @@ import { RouterModule } from '@angular/router';
   selector: 'app-topbar',
   host: { '(window:scroll)': 'onWindowScroll()' },
   imports: [CommonModule, RouterModule],
-  templateUrl: './topbar.component.html'
+  templateUrl: './topbar.html'
 })
-export class TopbarComponent {
+export class Topbar {
   isFixed = signal<boolean>(false);
 
   onWindowScroll(): void {

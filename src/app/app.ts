@@ -1,13 +1,13 @@
 import { afterNextRender, Component, inject, NgZone, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TopbarComponent } from './shared/components/topbar/topbar.component';
-import { FooterComponent } from './shared/components/footer/footer.component';
-import { LoaderComponent } from './shared/components/loader/loader.component';
+import { Topbar } from './shared/components/topbar/topbar';
+import { Footer } from './shared/components/footer/footer';
+import { Loader } from './shared/components/loader/loader';
 import Aos from 'aos';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TopbarComponent, FooterComponent, LoaderComponent],
+  imports: [RouterOutlet, Topbar, Footer, Loader],
   templateUrl: './app.html'
 })
 export class App {
