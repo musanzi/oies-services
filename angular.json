@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "woies-sarl": {
+    "oies-sarl": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -11,12 +11,10 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:application",
+          "builder": "@angular/build:application",
           "options": {
-            "outputPath": "dist/woies-sarl",
-            "index": "src/index.html",
+            "allowedCommonJsDependencies": ["aos"],
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -24,13 +22,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/aos/dist/aos.css", "src/styles/styles.css"],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "styles": ["src/styles.css", "node_modules/aos/dist/aos.css"]
           },
           "configurations": {
             "production": {
@@ -42,8 +34,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -57,24 +49,23 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "woies-sarl:build:production"
+              "buildTarget": "oies-sarl:build:production"
             },
             "development": {
-              "buildTarget": "woies-sarl:build:development"
+              "buildTarget": "oies-sarl:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n"
+          "builder": "@angular/build:extract-i18n"
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular/build:karma",
           "options": {
-            "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -82,21 +73,13 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/aos/dist/aos.css", "src/styles/styles.css"],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-eslint/builder:lint",
-          "options": {
-            "lintFilePatterns": ["src/**/*.ts", "src/**/*.html"]
+            "styles": ["src/styles.css", "node_modules/aos/dist/aos.css"]
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": "da434d68-c66c-490a-af25-36de5019d29a",
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "analytics": "b8769148-83ab-4da7-9aff-e314394ad1d8"
   }
 }
