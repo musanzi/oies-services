@@ -1,59 +1,94 @@
-# OiesSarl
+# Oies Sarl — Website (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.0.
+This repository contains the source for the Oies Sarl public website, implemented with Angular 20.
 
-## Development server
+The app is a small, component-based single page application (SPA) using Angular Router. It integrates AOS (Animate On Scroll) and Tailwind CSS utilities (Tailwind/PostCSS are present in devDependencies).
 
-To start a local development server, run:
+## Quick facts
 
-```bash
-ng serve
-```
+- Framework: Angular 20
+- Language: TypeScript
+- Styles: Plain CSS (with Tailwind/PostCSS available in devDependencies)
+- Animations: AOS (Animate On Scroll)
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Prerequisites
 
-## Code scaffolding
+- Node.js (recommended v18+)
+- pnpm (this repository uses pnpm workspace lockfile; npm or yarn may also work but pnpm is recommended)
+- Angular CLI (optional, can use the local CLI via npx or pnpm)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Install pnpm if you don't have it:
 
 ```bash
-ng generate --help
+npm install -g pnpm
 ```
 
-## Building
+## Setup
 
-To build the project run:
+Clone the repo and install dependencies:
 
 ```bash
-ng build
+git clone <repo-url>
+cd oies-sarl
+pnpm install
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Use the local Angular CLI via pnpm scripts. The important scripts provided in `package.json` are:
 
-## Running unit tests
+- `pnpm start` (or `pnpm ng serve`) — start the development server (default on http://localhost:4200)
+- `pnpm build` — build the production bundle (output goes to `dist/`)
+- `pnpm watch` — build in watch mode for development
+- `pnpm test` — run unit tests (Karma)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Run the dev server:
 
 ```bash
-ng test
+pnpm start
 ```
 
-## Running end-to-end tests
+Open http://localhost:4200 in your browser.
 
-For end-to-end (e2e) testing, run:
+## Project structure (important files)
+
+- `angular.json` — Angular CLI configuration (build/serve/test targets)
+- `package.json` — scripts and dependencies
+- `src/main.ts` — application entry
+- `src/index.html` — main HTML shell
+- `src/styles.css` — global styles
+- `src/app/app.ts` — root component and AOS initialization
+- `src/app/app.html` — root component template
+- `src/app/landing/*` — landing page feature modules and components (hero, home, about, goals, activities)
+- `src/app/shared/ui/*` — shared UI components (topbar, footer, loader)
+- `public/` — static assets served/copied into build (images, icons, etc.)
+
+## Notes about the codebase
+
+- AOS is initialized in the root `App` component after the first render using Angular's `NgZone` and `afterNextRender` to run the initialization outside Angular's zone.
+- The project is configured to allow `aos` as a CommonJS dependency in the build options.
+- Tailwind/PostCSS packages are present in `devDependencies`. If you're adding Tailwind utility classes, ensure `tailwind.config.cjs` and postcss config (if required) are present or added.
+
+## Building for production
+
+Build the production bundle with:
 
 ```bash
-ng e2e
+pnpm build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The optimized output is placed in `dist/` by default.
 
-## Additional Resources
+## Testing
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Run unit tests with Karma:
+
+```bash
+pnpm test
+```
+
+## Linting & Formatting
+
+This repository doesn't include ESLint or Prettier config by default. If you want linters, install and configure them (recommended: ESLint with TypeScript support).
+
+## Deployment
+
+The output in `dist/` can be deployed to any static hosting provider (Netlify, Vercel, GitHub Pages, S3, etc.). For servers that require a fallback route for SPA, configure redirects to `index.html`.
