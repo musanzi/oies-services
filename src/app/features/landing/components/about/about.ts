@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   selector: 'app-about',
   standalone: true,
   imports: [NgOptimizedImage],
-  templateUrl: './about.component.html'
+  templateUrl: './about.html'
 })
-export class AboutComponent {}
+export class About {}

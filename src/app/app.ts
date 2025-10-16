@@ -1,8 +1,8 @@
 import { afterNextRender, Component, inject, NgZone, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TopbarComponent } from './shared/ui/topbar/topbar.component';
-import { FooterComponent } from './shared/ui/footer/footer.component';
-import { LoaderComponent } from './shared/ui/loader/loader.component';
+import { TopbarComponent } from './shared/components/topbar/topbar.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { LoaderComponent } from './shared/components/loader/loader.component';
 import Aos from 'aos';
 
 @Component({

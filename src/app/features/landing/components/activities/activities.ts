@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-activities',
   imports: [NgOptimizedImage],
-  templateUrl: './activities.component.html'
+  templateUrl: './activities.html'
 })
-export class ActivitiesComponent {
+export class Activities {
   activities: { title: string; description: string; image: string }[] = [
     {
       title: 'Conférences Utajiri',

@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-goals',
   standalone: true,
   imports: [],
-  templateUrl: './goals.component.html'
+  templateUrl: './goals.html'
 })
-export class GoalsComponent {
+export class Goals {
   goals: { title: string; description: string; icon: string }[] = [
     {
       title: 'Éveiller la conscience des jeunes entrepreneurs',
